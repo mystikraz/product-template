@@ -18,7 +18,7 @@
                     
                   </mat-form-field>
                   <mat-card-actions>
-                      <button mat-button id="btn" type="submit" color="primary">Add Product</button>
+                      <button mat-raised-button id="btn" type="submit" color="primary">Add Product</button>
                     </mat-card-actions>
             </form>
         </div>
@@ -28,7 +28,7 @@
                 <p id="results-label">{{products.length}} Results</p>
 
                 <ul id="products-list">
-                  <li [@productsAnim]="state" *ngFor="let product of products; let i=index">{{product.title}}
+                  <li [@productsAnim]="state" *ngFor="let product of products; let i=index" style="text-decoration:none">{{i+1}}{{product.title}}
                     <img src="assets/delete.svg" (click)="removeProduct(i)" height="15" width="15" style="cursor: pointer">
                     <p>{{product.description}}</p>
                   </li>
